@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:context="com.example.kempi.bluetoothlowenergy.MainActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="81dp">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="364dp"
+            android:layout_height="260dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="false"
+            android:contentDescription=""
+            android:cropToPadding="true"
+            android:scaleType="center"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/krick" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="136dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            tools:ignore="MissingConstraints">
+
+
+            <ImageButton
+                android:id="@+id/Button"
+                android:layout_width="67dp"
+                android:layout_height="38dp"
+                android:onClick="playSound"
+                app:srcCompat="@android:drawable/ic_media_play"
+                tools:layout_editor_absoluteX="27dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+
+            <ImageButton
+                android:id="@+id/Button2"
+                android:layout_width="67dp"
+                android:layout_height="39dp"
+                android:layout_weight="0.07"
+                android:onClick="pauseSound"
+                app:srcCompat="@android:drawable/ic_media_pause"
+                tools:layout_editor_absoluteY="16dp"
+                tools:layout_editor_absolutey="27dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="587dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:weightSum="1"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="8dp">
+
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="225dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="0.07"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                tools:layout_editor_absoluteX="5dp">
+                <TextView
+                    android:id="@+id/MyTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginStart="1dp"
+                    android:autoLink="all"
+                    android:bufferType="spannable"
+                    android:drawablePadding="5dp"
+                    android:fadingEdge="vertical"
+                    android:fadingEdgeLength="25dp"
+                    android:isScrollContainer="true"
+                    android:linksClickable="true"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:scrollbars="vertical"
+                    android:text="The Scream (Norwegian: Skrik) is the popular name given to each of four versions of a composition, created as both paintings and pastels, by Norwegian Expressionist artist Edvard Munch between 1893 and 1910. The German title Munch gave these works is Der Schrei der Natur (The Scream of Nature). The works show a figure with an agonized expression against a landscape with a tumultuous orange sky"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp"
+                    android:textStyle="italic"
+                    app:layout_constraintHorizontal_bias="0.483"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:layout_editor_absoluteY="355dp">
+
+                </TextView>
+
+            </ScrollView>
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

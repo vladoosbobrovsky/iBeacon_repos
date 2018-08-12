@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "333948555791",
+    "firebase_url": "https://ibeacon-85c42.firebaseio.com",
+    "project_id": "ibeacon-85c42",
+    "storage_bucket": "ibeacon-85c42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333948555791:android:2875ad5ad3830a77",
+        "android_client_info": {
+          "package_name": "com.example.user.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333948555791-2dce08kbubq69flct76sfl1738v8siko.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjAG7mzYD2iGFbTq9ZvBrQ4McJ7C_sPmc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,112 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@android:color/holo_blue_light</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">?android:attr/colorForeground</item>
+        <item name="android:textColorPrimaryInverse">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/common_google_signin_btn_text_light_pressed</item>
+    </style>
+
+        <!--My own Night Theme below .-->
+    <style name="NightThemeOwn" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/themewhite</item>
+        <item name="colorPrimaryDark">@color/violet_dark</item>
+        <item name="colorAccent">@color/violetDark</item>
+    </style>
+
+
+
+    <style name="ThemeCentral" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/themewhite</item>
+        <item name="colorPrimaryDark">@color/violet_dark</item>
+        <item name="colorAccent">@color/violetDark</item>
+    </style>
+
+
+    <style name="ThemeMainPage" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/red_</item>
+        <item name="colorPrimaryDark">@color/redDark</item>
+        <item name="colorAccent">@color/red_</item>
+    </style>
+
+    <style name="ThemeArtGallery" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryDark">@color/yellowDark</item>
+        <item name="colorAccent">@color/yellow</item>
+    </style>
+
+    <style name="ThemeTools" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/lime</item>
+        <item name="colorPrimaryDark">@color/limeDark</item>
+        <item name="colorAccent">@color/lime</item>
+    </style>
+
+    <style name="ThemeAbout" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryDark">@color/greenDark</item>
+        <item name="colorAccent">@color/green</item>
+    </style>
+
+    <style name="ThemeShare" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/blueDark</item>
+        <item name="colorAccent">@color/blue</item>
+    </style>
+
+    <style name="ThemeSend" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/blueDark</item>
+        <item name="colorPrimaryDark">@color/darkBlueDark</item>
+        <item name="colorAccent">@color/blueDark</item>
+    </style>
+
+    <style name="MyProfile" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/DarkvioletDark</item>
+        <item name="colorPrimaryDark">@color/violet_dark</item>
+        <item name="colorAccent">@color/violetDark</item>
+    </style>
+
+
+    <style name="ThemeSettings" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/violet</item>
+        <item name="colorPrimaryDark">@color/violet_dark</item>
+        <item name="colorAccent">@color/violet</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay"
+        parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.AppBarOverlay">@color_common_google_signin_btn_text_dark_pressed</style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+
+
+    <style name="Theme">
+
+    </style>
+
+    <style name="Theme.AppCompat.Light.DarkActionBar">
+
+    </style>
+
+    <style name="ThemeOverlay">
+
+    </style>
+
+    <style name="test_theme" parent="AppTheme.NoActionBar" />
+
+
+
+
+
+
+</resources>

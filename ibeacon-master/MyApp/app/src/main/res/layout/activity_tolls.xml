@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TollsActivity">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        app:cardCornerRadius="15sp"
+        app:cardElevation="3sp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey">
+        <Button
+            android:id="@+id/btn_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="15sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            android:fontFamily="sans-serif"
+            android:textAllCaps="false"
+            android:layout_centerInParent="true"
+            android:text="@string/text_change"
+            android:background="@color/color_img_register" />
+        <ImageView
+            android:id="@+id/imagerestart"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/restart"
+            android:background="@color/white"
+            android:padding="3.5sp"
+            android:tint="@color/black"/>
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
