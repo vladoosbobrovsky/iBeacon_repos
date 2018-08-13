@@ -63,10 +63,12 @@
         <item name="colorAccent">@color/blueDark</item>
     </style>
 
-    <style name="MyProfile" parent="Theme.AppCompat.Light">
+    <style name="MyProfile" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/DarkvioletDark</item>
         <item name="colorPrimaryDark">@color/violet_dark</item>
         <item name="colorAccent">@color/violetDark</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
     </style>
 
 
