@@ -170,16 +170,18 @@
                 android:text="@string/title_sign_up"
                 android:background="@color/colorPrimary" />
 
+
             <ImageView
                 android:id="@+id/imageView0"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:layout_below="@+id/buttonSignIn_content"
+                android:layout_below="@+id/button_sign_up1"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="10dp"
                 android:layerType="software"
                 android:src="@drawable/circle" />
+
 
             <TextView
                 android:id="@+id/tv_signIn"
@@ -196,7 +198,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_signIn"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="35dp">
+                android:layout_marginTop="10dp">
 
                 <ImageButton
                     android:layout_width="64sp"
