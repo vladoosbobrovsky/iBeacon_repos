@@ -189,11 +189,12 @@
                 android:layout_below="@+id/checkbox_sign"
                 android:textColor="@color/white"
                 android:layout_marginTop="15sp"
-                android:layout_marginLeft="30sp"
+                android:layout_marginLeft="30sp"    
                 android:layout_marginRight="30sp"
                 android:fontFamily="sans-serif"
                 android:text="@string/title_sign_up"
-                android:background="@color/color_img_register" />
+                android:backgroundTint="@color/color_img_register"
+                android:background="@drawable/roundedbutton_10g" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 

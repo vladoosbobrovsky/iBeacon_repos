@@ -11,6 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
         android:layout_centerHorizontal="true"
         app:cardCornerRadius="10dp"
         app:cardElevation="3dp"
@@ -20,7 +22,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="15dp">
 
             <LinearLayout
                 android:id="@+id/linearLayout1"
@@ -152,9 +154,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/relative3"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:background="@color/colorPrimary"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/roundedbutton_10g"
+                android:backgroundTint="@color/colorPrimary"
                 android:fontFamily="sans-serif"
                 android:text="@string/title_sign_in"
                 android:textSize="14sp" />
@@ -164,11 +167,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/buttonSignIn_content"
                 android:layout_marginTop="15sp"
-                android:layout_marginLeft="30sp"
-                android:layout_marginRight="30sp"
+                 android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
                 android:fontFamily="sans-serif"
                 android:text="@string/title_sign_up"
-                android:background="@color/colorPrimary" />
+                android:background="@drawable/roundedbutton_10g"
+                android:backgroundTint="@color/colorPrimary" />
 
 
             <ImageView
@@ -221,6 +225,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginLeft="10dp"
+                    android:background="@drawable/roundedbutton_10g"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
                     android:src="@drawable/google_plus_64" />
