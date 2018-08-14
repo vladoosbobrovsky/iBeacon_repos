@@ -16,6 +16,7 @@
     <color name="editColor1">#185c80</color>
     <color name="textColor">#6e6e6e</color>
     <color name="color_img_register">#6e2c90</color>
+    <color name="color_img_register1">#be81de</color>
     <color name="color_dark_img">#551b72</color>
 
     <color name="red_">#F15050</color>
@@ -27,6 +28,7 @@
     <color name="green">#48d26b</color>
     <color name="greenDark">#36b957</color>
     <color name="blue">#48dfe1</color>
+    <color name="blue1">#0b8384</color>
     <color name="blueDark">#37c4c6</color>
     <color name="darkBlueDark">#417eca</color>
     <color name="violetDark">#7e50f1</color>

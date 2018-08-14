@@ -41,6 +41,14 @@
     <string name="text_change">Change Language</string>
     <!--new srt to multilingual-->
 
+    <string name="share_invate">We are just starting out, so please share our project with your friends
+So just click on the button below
+Thanks</string>
+
+    <string name="start_txt">We are just starting out</string>
+    <string name="start_txt1">So please share our project with your friends</string>
+    <string name="start_txt2">Just click on the button below</string>
+    <string name="start_txt3">Thanks</string>
     <string name="title_register">REGISTER</string>
     <string name="text_username">Username</string>
     <string name="text_password">Password</string>

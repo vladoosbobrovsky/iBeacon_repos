@@ -22,6 +22,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.testfairy.TestFairy;
 
 import static com.example.user.myapp.R.id;
 import static com.example.user.myapp.R.string;
@@ -39,6 +40,7 @@ public class Main_Activity extends AppCompatActivity implements View.OnClickList
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        TestFairy.begin(this, "17c0ff06f0d84e5301c93cff61990312059714e3");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_);
         button01 = (Button)findViewById(id.button_sign_up1);

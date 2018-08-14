@@ -51,10 +51,12 @@
         <item name="colorAccent">@color/green</item>
     </style>
 
-    <style name="ThemeShare" parent="Theme.AppCompat.Light">
+    <style name="ThemeShare" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/blue</item>
         <item name="colorPrimaryDark">@color/blueDark</item>
         <item name="colorAccent">@color/blue</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
     </style>
 
     <style name="ThemeSend" parent="Theme.AppCompat.Light">
