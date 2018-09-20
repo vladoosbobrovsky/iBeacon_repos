@@ -14,6 +14,7 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:name=".FireApp"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".NavigationActivity"

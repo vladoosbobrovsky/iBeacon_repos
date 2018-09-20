@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class ArtGalleryActivity extends AppCompatActivity implements View.OnClickListener {
-ImageView imageView_user_icon,imageView_password_icon_A_G,imageView_repassword_icon_S_U,imageView_email_icon_S_U,imageView_email_icon_a_g,image_art_g;
+    ImageView imageView_user_icon, imageView_password_icon_A_G, imageView_repassword_icon_S_U, imageView_email_icon_S_U, imageView_email_icon_a_g, image_art_g;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,32 +30,33 @@ ImageView imageView_user_icon,imageView_password_icon_A_G,imageView_repassword_i
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.imageView_user_icon:
-                Intent intentimageuser = new Intent(ArtGalleryActivity.this,BLEA1.class);
+                Intent intentimageuser = new Intent(ArtGalleryActivity.this, BLEA1.class);
                 startActivity(intentimageuser);
                 break;
             case R.id.imageView_password_icon_A_G:
-                Intent intentpass = new Intent(ArtGalleryActivity.this,BLEA2.class);
+                Intent intentpass = new Intent(ArtGalleryActivity.this, BLEA2.class);
                 startActivity(intentpass);
                 break;
             case R.id.imageView_repassword_icon_S_U:
-                Intent intentrepass = new Intent(ArtGalleryActivity.this,BLEA3.class);
+                Intent intentrepass = new Intent(ArtGalleryActivity.this, BLEA3.class);
                 startActivity(intentrepass);
                 break;
             case R.id.imageView_email_icon_S_U:
-                Intent intentemail = new Intent(ArtGalleryActivity.this,BLEA4.class);
+                Intent intentemail = new Intent(ArtGalleryActivity.this, BLEA4.class);
                 startActivity(intentemail);
                 break;
             case R.id.imageView_email_icon_a_g:
-                Intent intentemailag = new Intent(ArtGalleryActivity.this,BLEA5.class);
+                Intent intentemailag = new Intent(ArtGalleryActivity.this, BLEA5.class);
                 startActivity(intentemailag);
                 break;
             case R.id.image_art_g:
-                Intent intentart = new Intent(ArtGalleryActivity.this,CentralMenuActivity.class);
+                Intent intentart = new Intent(ArtGalleryActivity.this, CentralMenuActivity.class);
                 startActivity(intentart);
                 break;
 
         }
     }
+
 }

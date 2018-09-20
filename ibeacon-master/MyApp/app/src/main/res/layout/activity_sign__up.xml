@@ -189,7 +189,7 @@
                 android:layout_below="@+id/checkbox_sign"
                 android:textColor="@color/white"
                 android:layout_marginTop="15sp"
-                android:layout_marginLeft="30sp"    
+                android:layout_marginLeft="30sp"
                 android:layout_marginRight="30sp"
                 android:fontFamily="sans-serif"
                 android:text="@string/title_sign_up"

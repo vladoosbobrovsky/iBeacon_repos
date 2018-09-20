@@ -45,6 +45,10 @@
 So just click on the button below
 Thanks</string>
 
+    <string name="button_load_grades">Load info</string>
+    <string name="text_student_info">Info...</string>
+
+
     <string name="start_txt">We are just starting out</string>
     <string name="start_txt1">So please share our project with your friends</string>
     <string name="start_txt2">Just click on the button below</string>

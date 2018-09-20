@@ -1,0 +1,21 @@
+{
+	"student-grades" : {
+	"name" : "Edvard ",
+	"full-time" : "Munch",
+	"courses" : [
+	{
+		"name" : "Picture",
+		"grade" : "TheScream"
+	},
+	{
+		"name" : "Year",
+		"grade" : "1893"
+	},
+		{
+			"name" : "Price",
+			"grade" : "Over $119 million"
+		}
+
+	]
+	}
+}

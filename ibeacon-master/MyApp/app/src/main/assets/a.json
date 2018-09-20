@@ -1,0 +1,24 @@
+[
+	{
+		"name" :"Vladoos",
+		"city" : "Lutsk",
+		"number" : "1"
+
+	},
+	{
+		"name" : "Hamza",
+		"city" : "Lviv",
+		"number": "2"
+	
+	},
+	{
+		"name" : "Vadim",
+		"city" : "Kyev",
+		"number" : "3"
+	
+	}
+	
+	
+
+
+]
