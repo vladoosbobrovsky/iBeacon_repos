@@ -1,62 +1,116 @@
 package com.example.user.myapp;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ArtGalleryActivity extends AppCompatActivity implements View.OnClickListener {
-    ImageView imageView_user_icon, imageView_password_icon_A_G, imageView_repassword_icon_S_U, imageView_email_icon_S_U, imageView_email_icon_a_g, image_art_g;
+    private ImageView imageView;
+    private RecyclerView recyclerView;
+    private LinearLayoutManager verticalLinearLayoutManager;
+    private LinearLayoutManager horizontalLinearLayoutManager;
+    private RecycleAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_art_gallery);
-        imageView_user_icon = findViewById(R.id.imageView_user_icon);
-        imageView_password_icon_A_G = findViewById(R.id.imageView_password_icon_A_G);
-        imageView_repassword_icon_S_U = findViewById(R.id.imageView_repassword_icon_S_U);
-        imageView_email_icon_S_U = findViewById(R.id.imageView_email_icon_S_U);
-        imageView_email_icon_a_g = findViewById(R.id.imageView_email_icon_a_g);
-        image_art_g = findViewById(R.id.image_art_g);
+        recyclerView = findViewById(R.id.recycler);
+        recyclerView.setOnClickListener(this);
+        verticalLinearLayoutManager = new LinearLayoutManager(this);
+        horizontalLinearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false );
+        recyclerView.setLayoutManager(verticalLinearLayoutManager);
+        adapter = new RecycleAdapter();
+        recyclerView.setAdapter(adapter);
+        adapter.addAll(ModelItem.getFakeItems());
 
 
-        imageView_user_icon.setOnClickListener(this);
-        imageView_password_icon_A_G.setOnClickListener(this);
-        imageView_repassword_icon_S_U.setOnClickListener(this);
-        imageView_email_icon_S_U.setOnClickListener(this);
-        imageView_email_icon_a_g.setOnClickListener(this);
-        image_art_g.setOnClickListener(this);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+            super.onConfigurationChanged(newConfig);
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE){
+            recyclerView.setLayoutManager(horizontalLinearLayoutManager);
+        }else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+            recyclerView.setLayoutManager(verticalLinearLayoutManager);
+        }
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.imageView_user_icon:
+        switch (v.getId()){
+            case R.id.imageView:
                 Intent intentimageuser = new Intent(ArtGalleryActivity.this, BLEA1.class);
                 startActivity(intentimageuser);
                 break;
-            case R.id.imageView_password_icon_A_G:
-                Intent intentpass = new Intent(ArtGalleryActivity.this, BLEA2.class);
-                startActivity(intentpass);
-                break;
-            case R.id.imageView_repassword_icon_S_U:
-                Intent intentrepass = new Intent(ArtGalleryActivity.this, BLEA3.class);
-                startActivity(intentrepass);
-                break;
-            case R.id.imageView_email_icon_S_U:
-                Intent intentemail = new Intent(ArtGalleryActivity.this, BLEA4.class);
-                startActivity(intentemail);
-                break;
-            case R.id.imageView_email_icon_a_g:
-                Intent intentemailag = new Intent(ArtGalleryActivity.this, BLEA5.class);
-                startActivity(intentemailag);
-                break;
-            case R.id.image_art_g:
-                Intent intentart = new Intent(ArtGalleryActivity.this, CentralMenuActivity.class);
-                startActivity(intentart);
-                break;
 
+        }
+
+    }
+
+    private class RecycleAdapter extends RecyclerView.Adapter<RecyclerViewHolder>{
+        private ArrayList<ModelItem> items = new ArrayList<>();
+
+
+
+        public void addAll(List<ModelItem> fakeItems) {
+
+            int pos = getItemCount();
+            this.items.addAll(fakeItems);
+            notifyItemRangeInserted(pos,this.items.size());
+
+        }
+
+
+        @Override
+        public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_card,parent,false);
+
+
+            return new RecyclerViewHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(RecyclerViewHolder holder, int position) {
+        holder.bind(items.get(position));
+        }
+
+        @Override
+        public int getItemCount() {
+            return items.size();
         }
     }
 
+
+    private class RecyclerViewHolder extends RecyclerView.ViewHolder {
+        private TextView title;
+        private ImageView image;
+
+
+        public RecyclerViewHolder(View itemView) {
+            super(itemView);
+            title = (TextView)itemView.findViewById(R.id.title);
+            image = (ImageView)itemView.findViewById(R.id.image);
+        }
+
+        public void bind(ModelItem modelItem) {
+            image.setImageBitmap(BitmapFactory.decodeResource(itemView.getResources(),modelItem.getImgId()));
+            title.setText(modelItem.getAuthor());
+        }
+    }
 }
+

@@ -14,7 +14,6 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name=".FireApp"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".NavigationActivity"
@@ -32,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".BluetoothLowEnergyActivity" />
-        <activity android:name=".BLEA1" />
+        <activity android:name=".BLEA1"/>
         <activity android:name=".BLEA2" />
         <activity android:name=".BLEA3" />
         <activity android:name=".BLEA4" />
@@ -57,11 +56,7 @@
         <activity
             android:name=".Main_Activity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
@@ -111,15 +106,24 @@
 
         <activity android:name=".CentralMenuActivity"
             android:theme="@style/ThemeCentral"
-            android:label="@string/title_activity_central"/>
+            android:label="@string/title_activity_central">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".MainPageActivity"
             android:theme="@style/ThemeMainPage"
             android:label="@string/title_activity_main_page"/>
         <activity
             android:name=".ArtGalleryActivity"
+            android:configChanges="orientation|screenSize"
             android:theme="@style/ThemeArtGallery"
-            android:label="@string/title_activity_art_gallery"/>
+            android:label="@string/title_activity_art_gallery">
+
+        </activity>
         <activity
             android:name=".TollsActivity"
             android:theme="@style/ThemeTools"

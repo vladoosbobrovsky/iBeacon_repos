@@ -22,9 +22,14 @@ public class BLEA1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.blea1);
         mMediaPlayer = MediaPlayer.create(this,R.raw.edvard_munk);
-
+        loadGrades();
+        
     }
-    public void loadGrades (View view){
+
+
+
+
+    public void loadGrades (){
         Resources res = getResources();
         InputStream is = res.openRawResource(R.raw.student_grates);
         Scanner scanner = new Scanner(is);
@@ -63,6 +68,7 @@ public class BLEA1 extends AppCompatActivity {
 
 
             }
+            
 
         } catch (JSONException e) {
 

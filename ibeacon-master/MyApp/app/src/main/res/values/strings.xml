@@ -41,6 +41,14 @@
     <string name="text_change">Change Language</string>
     <!--new srt to multilingual-->
 
+    <string name="act1">The Scream</string>
+    <string name="act2">Starry Night</string>
+    <string name="act3">Blue Dancers</string>
+    <string name="act4">Persistence of Memory</string>
+    <string name="act5">Old Guitarist</string>
+
+
+
     <string name="share_invate">We are just starting out, so please share our project with your friends
 So just click on the button below
 Thanks</string>

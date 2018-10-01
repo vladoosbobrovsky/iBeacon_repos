@@ -20,16 +20,15 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="364dp"
+            android:layout_width="452dp"
             android:layout_height="260dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="16dp"
+            android:layout_marginRight="8dp"
             android:adjustViewBounds="false"
             android:contentDescription=""
             android:cropToPadding="true"
             android:scaleType="center"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -37,13 +36,10 @@
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="236dp"
+            android:layout_width="148dp"
             android:layout_height="41dp"
-            android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="1"
@@ -58,17 +54,9 @@
                 android:id="@+id/Button"
                 android:layout_width="67dp"
                 android:layout_height="38dp"
+                android:layout_marginRight="7dp"
                 android:onClick="playSound"
                 app:srcCompat="@android:drawable/ic_media_play"
-                tools:layout_editor_absoluteX="27dp"
-                tools:layout_editor_absoluteY="16dp" />
-            <ImageButton
-                android:id="@+id/Buttonc"
-                android:layout_width="67dp"
-                android:layout_height="38dp"
-                android:onClick="loadGrades"
-                app:srcCompat="@android:drawable/stat_sys_upload_done"
-                android:tint="@color/color_img_register1"
                 tools:layout_editor_absoluteX="27dp"
                 tools:layout_editor_absoluteY="16dp" />
 
@@ -76,11 +64,12 @@
                 android:id="@+id/Button2"
                 android:layout_width="67dp"
                 android:layout_height="39dp"
-                android:layout_weight="0.07"
+                android:layout_weight="0.1"
                 android:onClick="pauseSound"
                 app:srcCompat="@android:drawable/ic_media_pause"
                 tools:layout_editor_absoluteY="16dp"
                 tools:layout_editor_absolutey="27dp" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -91,27 +80,28 @@
             android:weightSum="1"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="8dp">
+            tools:layout_editor_absoluteX="60dp">
 
 
             <ScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="225dp"
-                android:layout_marginEnd="10dp"
                 android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
                 android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="2dp"
                 android:layout_weight="0.07"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout"
                 tools:layout_editor_absoluteX="5dp">
+
                 <TextView
                     android:id="@+id/MyTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginStart="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="10dp"
                     android:autoLink="all"
                     android:bufferType="spannable"
                     android:drawablePadding="5dp"
