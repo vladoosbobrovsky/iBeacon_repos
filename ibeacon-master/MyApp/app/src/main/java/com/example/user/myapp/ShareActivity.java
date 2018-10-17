@@ -7,7 +7,8 @@ import android.view.View;
 import android.widget.Button;
 
 public class ShareActivity extends AppCompatActivity {
-Button btn;
+    Button btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +19,7 @@ Button btn;
             public void onClick(View v) {
                 Intent newintent = new Intent();
                 newintent.setAction(Intent.ACTION_SEND);
-                newintent.putExtra(Intent.EXTRA_TEXT,"Hey there!!!Please Download this App " +
+                newintent.putExtra(Intent.EXTRA_TEXT, "Hey there!!!Please Download this App " +
                         "" +
                         "https://my.testfairy.com/download/70V36C1S6GSJTD1J64V3EC9J6GTJT5E94REWW6M90PWF492B9F9BS1H4T1C6T/getapp?_=1539784338");
                 newintent.setType("text/plain");

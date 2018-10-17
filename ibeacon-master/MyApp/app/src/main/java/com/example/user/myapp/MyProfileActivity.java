@@ -46,7 +46,7 @@ public class MyProfileActivity extends AppCompatActivity implements ExampleAdapt
     }
 
     private void parseJSON() {
-        String url = "https://firebasestorage.googleapis.com/v0/b/myapp-1079a.appspot.com/o/meaw_11_1.json?alt=media&token=45d20aa3-0929-4d40-85ef-f0e0f1e71f64";
+        String url = "https://firebasestorage.googleapis.com/v0/b/myapp-1079a.appspot.com/o/meaw_11_1.json?alt=media&token=7d47a67a-d748-4574-a261-d04207800c97";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
