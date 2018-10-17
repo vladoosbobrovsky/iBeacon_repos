@@ -5,7 +5,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -31,11 +30,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".BluetoothLowEnergyActivity" />
-        <activity android:name=".BLEA1"/>
-        <activity android:name=".BLEA2" />
-        <activity android:name=".BLEA3" />
-        <activity android:name=".BLEA4" />
-        <activity android:name=".BLEA5" />
 
         <service
             android:name=".MyFirebaseInstanceIDService"
@@ -55,9 +49,7 @@
 
         <activity
             android:name=".Main_Activity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -102,55 +94,56 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity_Sign_Up"/>
+        <activity android:name=".Activity_Sign_Up" />
+        <activity
+            android:name=".CentralMenuActivity"
+            android:label="@string/title_activity_central"
+            android:theme="@style/ThemeCentral">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <activity android:name=".CentralMenuActivity"
-            android:theme="@style/ThemeCentral"
-            android:label="@string/title_activity_central">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".MainPageActivity"
-            android:theme="@style/ThemeMainPage"
-            android:label="@string/title_activity_main_page"/>
+            android:label="@string/title_activity_main_page"
+            android:theme="@style/ThemeMainPage" />
         <activity
             android:name=".ArtGalleryActivity"
             android:configChanges="orientation|screenSize"
-            android:theme="@style/ThemeArtGallery"
-            android:label="@string/title_activity_art_gallery">
-
-        </activity>
+            android:label="@string/title_activity_art_gallery"
+            android:theme="@style/ThemeArtGallery" />
         <activity
             android:name=".TollsActivity"
-            android:theme="@style/ThemeTools"
-            android:label="@string/title_activity_tools"/>
+            android:label="@string/title_activity_tools"
+            android:theme="@style/ThemeTools" />
         <activity
             android:name=".AboutUsActivity"
-            android:theme="@style/ThemeAbout"
-            android:label="@string/title_activity_about_us"/>
+            android:label="@string/title_activity_about_us"
+            android:theme="@style/ThemeAbout" />
         <activity
             android:name=".ShareActivity"
-            android:theme="@style/ThemeShare"
-            android:label="@string/title_activity_share"/>
+            android:label="@string/title_activity_share"
+            android:theme="@style/ThemeShare" />
         <activity
             android:name=".SendActivity"
-            android:theme="@style/ThemeSend"
-            android:label="@string/title_activity_send"/>
+            android:label="@string/title_activity_send"
+            android:theme="@style/ThemeSend" />
         <activity
             android:name=".MyProfileActivity"
-            android:theme="@style/MyProfile"
-            android:label="@string/title_activity_my_profile"/>
+            android:label="@string/title_activity_my_profile"
+            android:theme="@style/MyProfile" />
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:theme="@style/ThemeSettings" >
-
-
-    </activity>
+            android:theme="@style/ThemeSettings" />
+        <activity
+            android:name=".ScrollingActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".GalleryActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".DetailActivity"></activity>
     </application>
 
 </manifest>

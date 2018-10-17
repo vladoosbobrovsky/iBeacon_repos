@@ -12,7 +12,7 @@ public class BluetoothLowEnergyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bluetooth_low_energy_activity);
-        mMediaPlayer = MediaPlayer.create(this, R.raw.acdc);
+        mMediaPlayer = MediaPlayer.create(this, R.raw.zvezdnaya_noch);
     }
 
     public void playSound(View v) {

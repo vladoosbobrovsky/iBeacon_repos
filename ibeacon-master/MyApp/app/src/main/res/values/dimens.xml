@@ -6,9 +6,15 @@
     <dimen name="nav_header_vertical_spacing">14dp</dimen>
     <dimen name="nav_header_height">191dp</dimen>
     <dimen name="gallery_item">25dp</dimen>
-    <dimen tools:override="true"
-        name="design_navigation_icon_padding">
+    <dimen name="design_navigation_icon_padding" tools:override="true">
         11dp
 
     </dimen>
+    <dimen name="app_bar_height">280dp</dimen>
+    <dimen name="app_bar_height_galery">480dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+
+
+
 </resources>

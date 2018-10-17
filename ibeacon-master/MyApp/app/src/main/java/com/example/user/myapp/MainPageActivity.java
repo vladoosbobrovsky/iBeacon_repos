@@ -19,16 +19,20 @@ import java.util.Scanner;
 
 public class MainPageActivity extends AppCompatActivity {
 
+
     private Context activity;
     private ImageView imView;
+    private ImageView imageView;
+    private String fullScreenInd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
         imView =  findViewById(R.id.image_from_url);
-        Glide.with(this).load("http://erhankilic.org/wp-content/uploads/2017/08/HTTP.jpg").into((imView));
+        Glide.with(this).load("https://imgc.allpostersimages.com/img/print/posters/edvard-munch-o-grito_a-G-2687914-0.jpg").into((imView));
         loadGrades();
+
 
     }
 

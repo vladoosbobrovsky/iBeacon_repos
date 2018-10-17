@@ -54,15 +54,15 @@ RelativeLayout rellay1,horizontalrelay1,horizontalrelay2;
                 startActivity(intent);
                 break;
             case R.id.imageimport2:
-                Intent intent2 = new Intent(CentralMenuActivity.this, ArtGalleryActivity.class);
+                Intent intent2 = new Intent(CentralMenuActivity.this, MainActivity.class);
                 startActivity(intent2);
                 break;
             case R.id.horizontalrelay2:
-                Intent intenth = new Intent(CentralMenuActivity.this, ArtGalleryActivity.class);
+                Intent intenth = new Intent(CentralMenuActivity.this, MainActivity.class);
                 startActivity(intenth);
                 break;
             case R.id.imageimport3:
-                Intent intent3 = new Intent(CentralMenuActivity.this, TollsActivity.class);
+                Intent intent3 = new Intent(CentralMenuActivity.this, ScrollingActivity.class);
                 startActivity(intent3);
                 break;
             case R.id.imageimport4:
