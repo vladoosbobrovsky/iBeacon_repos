@@ -14,6 +14,7 @@ RelativeLayout rellay1,horizontalrelay1,horizontalrelay2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_central_menu);
         horizontalrelay1 = findViewById(R.id.horizontalrelay1);
         horizontalrelay2 = findViewById(R.id.horizontalrelay2);

@@ -20,7 +20,7 @@ Button btn;
                 newintent.setAction(Intent.ACTION_SEND);
                 newintent.putExtra(Intent.EXTRA_TEXT,"Hey there!!!Please Download this App " +
                         "" +
-                        "https://my.testfairy.com/download/70TKADHS64SJTD1J64V3EC9J6GTJTA0BA7F98NN37V2HBCAMR78YEZGR72RT4/getapp?_=1539768304");
+                        "https://my.testfairy.com/download/70V36C1S6GSJTD1J64V3EC9J6GTJT5E94REWW6M90PWF492B9F9BS1H4T1C6T/getapp?_=1539784338");
                 newintent.setType("text/plain");
                 startActivity(newintent);
             }

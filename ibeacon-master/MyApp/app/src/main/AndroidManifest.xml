@@ -110,7 +110,7 @@
             android:label="@string/title_activity_main_page"
             android:theme="@style/ThemeMainPage" />
         <activity
-            android:name=".ArtGalleryActivity"
+            android:name=".MainActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/title_activity_art_gallery"
             android:theme="@style/ThemeArtGallery" />
@@ -142,7 +142,6 @@
             android:name=".ScrollingActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".GalleryActivity" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".DetailActivity"></activity>
     </application>
 
