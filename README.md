@@ -1,14 +1,12 @@
-# iBeacon_repos
-New iBeacon repository (added12.08)
 
 
 
-##Hi to everyone
+
+#####Hi to everyone
 This is my first project and i'm planning using Bluetooth Low Energy Activity
 
-
-##Now in my iBeaconRepos there are many interesting things like Material Design,Glide library CardView with Recycler  and so much more
-I'd be very grateful if you could help me- just give me some directions.
+####Now in my iBeaconRepos there are many interesting things like Material Design,Glide library CardView with Recycler  and so much more
+####I'd be very grateful if you could help me- just give me some directions.
 
 ![screenshot_2018-10-17-13-43-38-522_com example user myapp](https://user-images.githubusercontent.com/32505948/47081976-dfc1d080-d214-11e8-9793-6653c98c35b7.png)
 
