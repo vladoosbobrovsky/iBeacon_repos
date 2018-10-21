@@ -63,7 +63,7 @@ RelativeLayout rellay1,horizontalrelay1,horizontalrelay2;
                 startActivity(intenth);
                 break;
             case R.id.imageimport3:
-                Intent intent3 = new Intent(CentralMenuActivity.this, ScrollingActivity.class);
+                Intent intent3 = new Intent(CentralMenuActivity.this, FlexibleSpaceExampleActivity.class);
                 startActivity(intent3);
                 break;
             case R.id.imageimport4:
@@ -75,7 +75,7 @@ RelativeLayout rellay1,horizontalrelay1,horizontalrelay2;
                 startActivity(intent5);
                 break;
             case R.id.imageimport6:
-                Intent intent6 = new Intent(CentralMenuActivity.this, SendActivity.class);
+                Intent intent6 = new Intent(CentralMenuActivity.this, FullScreenActivity.class);
                 startActivity(intent6);
                 break;
             case R.id.imageimport7:

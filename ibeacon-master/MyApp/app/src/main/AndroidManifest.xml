@@ -98,6 +98,7 @@
         <activity
             android:name=".CentralMenuActivity"
             android:label="@string/title_activity_central"
+            android:screenOrientation="portrait"
             android:theme="@style/ThemeCentral">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -108,41 +109,57 @@
         <activity
             android:name=".MainPageActivity"
             android:label="@string/title_activity_main_page"
+            android:screenOrientation="portrait"
             android:theme="@style/ThemeMainPage" />
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/title_activity_art_gallery"
+            android:screenOrientation="portrait"
             android:theme="@style/ThemeArtGallery" />
         <activity
             android:name=".TollsActivity"
             android:label="@string/title_activity_tools"
+            android:screenOrientation="portrait"
             android:theme="@style/ThemeTools" />
         <activity
             android:name=".AboutUsActivity"
             android:label="@string/title_activity_about_us"
+            android:screenOrientation="portrait"
             android:theme="@style/ThemeAbout" />
         <activity
             android:name=".ShareActivity"
             android:label="@string/title_activity_share"
+            android:screenOrientation="portrait"
             android:theme="@style/ThemeShare" />
         <activity
             android:name=".SendActivity"
             android:label="@string/title_activity_send"
+            android:screenOrientation="portrait"
             android:theme="@style/ThemeSend" />
         <activity
             android:name=".MyProfileActivity"
             android:label="@string/title_activity_my_profile"
+            android:screenOrientation="portrait"
             android:theme="@style/MyProfile" />
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait"
             android:theme="@style/ThemeSettings" />
         <activity
             android:name=".ScrollingActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-        <activity android:name=".GalleryActivity" />
-        <activity android:name=".DetailActivity"></activity>
+        <activity
+            android:name=".GalleryActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".DetailActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".FlexibleSpaceExampleActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".FullScreenActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

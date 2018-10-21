@@ -1,10 +1,12 @@
 package com.example.user.myapp;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -21,6 +23,8 @@ import java.util.ArrayList;
 
 public class MyProfileActivity extends AppCompatActivity implements ExampleAdapter.OnItemClickListener {
     public static final String EXTRA_URL = "imageUrl";
+    public static final String EXTRA_MEDIA = "mediaSound";
+    public static final String EXTRA_URL1 = "imageUrl";
     public static final String EXTRA_CREATOR = "creatorName";
     public static final String EXTRA_LIKES = "likeCount";
     public static final String EXTRA_CONTENT ="content";
@@ -29,6 +33,7 @@ public class MyProfileActivity extends AppCompatActivity implements ExampleAdapt
     private ExampleAdapter mExampleAdapter;
     private ArrayList<ExampleItem> mExampleList;
     private RequestQueue mRequestQueue;
+    private FloatingActionButton mfab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +48,17 @@ public class MyProfileActivity extends AppCompatActivity implements ExampleAdapt
 
         mRequestQueue = Volley.newRequestQueue(this);
         parseJSON();
+        findViewById(R.id.flexfab).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MyProfileActivity.this,AboutUsActivity.class));
+            }
+        });
     }
 
+
     private void parseJSON() {
-        String url = "https://firebasestorage.googleapis.com/v0/b/myapp-1079a.appspot.com/o/meaw_11_1.json?alt=media&token=7d47a67a-d748-4574-a261-d04207800c97";
+        String url = "https://firebasestorage.googleapis.com/v0/b/myapp-1079a.appspot.com/o/meaw_11_1.json?alt=media&token=445a3cc9-0c90-4acf-b20f-e7b270bc3e8e";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
@@ -60,10 +72,12 @@ public class MyProfileActivity extends AppCompatActivity implements ExampleAdapt
 
                                 String creatorName = hit.getString("user");
                                 String imageUrl = hit.getString("webformatURL");
+                                String imageUrl1 = hit.getString("webformatURL");
                                 String likeCount = hit.getString("picture");
                                 String content = hit.getString("content_picture");
+                                String media = hit.getString("mediaSound");
 
-                                mExampleList.add(new ExampleItem(imageUrl, creatorName, likeCount,content));
+                                mExampleList.add(new ExampleItem(imageUrl, creatorName, likeCount,content,imageUrl1,media));
                             }
 
                             mExampleAdapter = new ExampleAdapter(MyProfileActivity.this, mExampleList);
@@ -90,8 +104,10 @@ public class MyProfileActivity extends AppCompatActivity implements ExampleAdapt
         ExampleItem clickedItem = mExampleList.get(position);
         detailIntent.putExtra(EXTRA_CONTENT,clickedItem.getmContent());
         detailIntent.putExtra(EXTRA_URL, clickedItem.getImageUrl());
+        detailIntent.putExtra(EXTRA_URL1, clickedItem.getImageUrl1());
         detailIntent.putExtra(EXTRA_CREATOR, clickedItem.getCreator());
         detailIntent.putExtra(EXTRA_LIKES, clickedItem.getLikeCount());
+        detailIntent.putExtra(EXTRA_MEDIA, clickedItem.getLikeCount());
 
         startActivity(detailIntent);
     }
