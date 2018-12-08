@@ -19,4 +19,6 @@ public class TollsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tolls);
 
     }
+
+
 }

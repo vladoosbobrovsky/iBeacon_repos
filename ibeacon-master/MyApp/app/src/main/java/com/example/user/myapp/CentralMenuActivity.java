@@ -8,8 +8,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 public class CentralMenuActivity extends AppCompatActivity implements View.OnClickListener {
-ImageView imageimport1, imageimport2,imageimport3,imageimport4,imageimport5,imageimport6,imageimport7,imageimport8;
-RelativeLayout rellay1,horizontalrelay1,horizontalrelay2;
+    ImageView imageimport1, imageimport2, imageimport3, imageimport4, imageimport5, imageimport6, imageimport7, imageimport8;
+    RelativeLayout rellay1, horizontalrelay1, horizontalrelay2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,17 +20,17 @@ RelativeLayout rellay1,horizontalrelay1,horizontalrelay2;
         horizontalrelay2 = findViewById(R.id.horizontalrelay2);
 
         rellay1 = findViewById(R.id.rellay_1);
-       imageimport1 = findViewById(R.id.imageimport1);
-       imageimport2 = findViewById(R.id.imageimport2);
-       imageimport3 = findViewById(R.id.imageimport3);
-       imageimport4 = findViewById(R.id.imageimport4);
-       imageimport5 = findViewById(R.id.imageimport5);
-       imageimport6 = findViewById(R.id.imageimport6);
-       imageimport7 = findViewById(R.id.imageimport7);
-       imageimport8 = findViewById(R.id.imageimport8);
+        imageimport1 = findViewById(R.id.imageimport1);
+        imageimport2 = findViewById(R.id.imageimport2);
+        imageimport3 = findViewById(R.id.imageimport3);
+        imageimport4 = findViewById(R.id.imageimport4);
+        imageimport5 = findViewById(R.id.imageimport5);
+        imageimport6 = findViewById(R.id.imageimport6);
+        imageimport7 = findViewById(R.id.imageimport7);
+        imageimport8 = findViewById(R.id.imageimport8);
 
-       horizontalrelay2.setOnClickListener(this);
-       rellay1.setOnClickListener(this);
+        horizontalrelay2.setOnClickListener(this);
+        rellay1.setOnClickListener(this);
         imageimport1.setOnClickListener(this);
         imageimport2.setOnClickListener(this);
         imageimport3.setOnClickListener(this);
@@ -87,6 +87,7 @@ RelativeLayout rellay1,horizontalrelay1,horizontalrelay2;
                 startActivity(intent8);
                 break;
 
+        }
     }
-}}
+}
 

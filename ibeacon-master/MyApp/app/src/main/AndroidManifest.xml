@@ -100,11 +100,6 @@
             android:label="@string/title_activity_central"
             android:screenOrientation="portrait"
             android:theme="@style/ThemeCentral">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MainPageActivity"
@@ -154,12 +149,22 @@
         <activity
             android:name=".GalleryActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".DetailActivity"
+        <activity
+            android:name=".DetailActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".FlexibleSpaceExampleActivity"
+        <activity
+            android:name=".FlexibleSpaceExampleActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".FullScreenActivity"
+        <activity
+            android:name=".FullScreenActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

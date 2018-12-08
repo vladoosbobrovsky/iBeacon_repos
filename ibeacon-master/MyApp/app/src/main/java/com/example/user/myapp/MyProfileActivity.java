@@ -107,7 +107,7 @@ public class MyProfileActivity extends AppCompatActivity implements ExampleAdapt
         detailIntent.putExtra(EXTRA_URL1, clickedItem.getImageUrl1());
         detailIntent.putExtra(EXTRA_CREATOR, clickedItem.getCreator());
         detailIntent.putExtra(EXTRA_LIKES, clickedItem.getLikeCount());
-        detailIntent.putExtra(EXTRA_MEDIA, clickedItem.getLikeCount());
+        detailIntent.putExtra(EXTRA_MEDIA, clickedItem.getmMedia());
 
         startActivity(detailIntent);
     }

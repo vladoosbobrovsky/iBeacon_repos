@@ -14,11 +14,13 @@ public class AboutUsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mehdi.sakout.aboutpage.Element adsElement = new mehdi.sakout.aboutpage.Element();
         adsElement.setTitle("Version 1.1");
+        adsElement.setIconDrawable(R.drawable.about_icon_github);
 
         View aboutPage = new AboutPage(this)
                 .isRTL(false)
-                .setImage(R.drawable.ibeaconsing_in_grad)
-                .addItem(new Element().setTitle("iBeacon"))
+                .setDescription("Hey there!! Please share our project with your friends")
+                .setImage(R.drawable.ibeaconsing_in_cc)
+                .addItem(new Element().setTitle("iBeacon").setIconDrawable(R.drawable.play_button).setIconTint(R.color.yellow))
                 .addItem(adsElement)
                 .addGroup("Connect with us")
                 .addEmail("500kg.ggwp@gmail.com")
