@@ -1,85 +1,77 @@
 package com.example.user.myapp;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.GridView;
 
-import org.json.JSONArray;
+import com.estimote.mustard.rx_goodness.rx_requirements_wizard.Requirement;
+import com.estimote.mustard.rx_goodness.rx_requirements_wizard.RequirementsWizardFactory;
+import com.example.user.myapp.estimote.ProximityContentAdapter;
+import com.example.user.myapp.estimote.ProximityContentManager;
 
-import java.util.ArrayList;
+import java.util.List;
+
+import kotlin.Unit;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.functions.Function1;
+
+//
+// Running into any issues? Drop us an email to: contact@estimote.com
+//
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
-
-    //vars
-    private ArrayList<String> mNames = new ArrayList<>();
-    private ArrayList<String> mImageUrls = new ArrayList<>();
-    private ArrayList<String> mDesciption = new ArrayList<>();
+    private ProximityContentManager proximityContentManager;
+    private ProximityContentAdapter proximityContentAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Log.d(TAG, "onCreate: started.");
+        setContentView(R.layout.activity_send);
 
-        initImageBitmaps();
+        proximityContentAdapter = new ProximityContentAdapter(this);
+        GridView gridView = findViewById(R.id.gridView);
+        gridView.setAdapter(proximityContentAdapter);
+
+
+        RequirementsWizardFactory
+                .createEstimoteRequirementsWizard()
+                .fulfillRequirements(this,
+                        new Function0<Unit>() {
+                            @Override
+                            public Unit invoke() {
+                                Log.d("app", "requirements fulfilled");
+                                startProximityContentManager();
+                                return null;
+                            }
+                        },
+                        new Function1<List<? extends Requirement>, Unit>() {
+                            @Override
+                            public Unit invoke(List<? extends Requirement> requirements) {
+                                Log.e("app", "requirements missing: " + requirements);
+                                return null;
+                            }
+                        },
+                        new Function1<Throwable, Unit>() {
+                            @Override
+                            public Unit invoke(Throwable throwable) {
+                                Log.e("app", "requirements error: " + throwable);
+                                return null;
+                            }
+                        });
     }
 
-    private void initImageBitmaps(){
-        Log.d(TAG, "initImageBitmaps: preparing bitmaps.");
-
-        mImageUrls.add("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg");
-        mNames.add("Edvard Munch");
-        mDesciption.add("The Scream");
-
-        mImageUrls.add("https://i.redd.it/tpsnoz5bzo501.jpg");
-        mNames.add("Trondheim");
-        mDesciption.add("Line for some description to picture 2");
-
-
-        mImageUrls.add("https://i.redd.it/qn7f9oqu7o501.jpg");
-        mNames.add("Portugal");
-        mDesciption.add("Line for some description to picture 3");
-
-        mImageUrls.add("https://i.redd.it/j6myfqglup501.jpg");
-        mNames.add("Rocky Mountain National Park");
-        mDesciption.add("Line for some description to picture 4");
-
-
-        mImageUrls.add("https://i.redd.it/0h2gm1ix6p501.jpg");
-        mNames.add("Mahahual");
-        mDesciption.add("Line for some description to pucture 5");
-
-        mImageUrls.add("https://i.redd.it/k98uzl68eh501.jpg");
-        mNames.add("Frozen Lake");
-        mDesciption.add("Line for some description to pucture 6");
-
-
-        mImageUrls.add("https://i.redd.it/glin0nwndo501.jpg");
-        mNames.add("White Sands Desert");
-        mDesciption.add("Line for some description to pucture 7");
-
-        mImageUrls.add("https://i.redd.it/obx4zydshg601.jpg");
-        mNames.add("Austrailia");
-        mDesciption.add("Line for some description to pucture 8");
-
-        mImageUrls.add("https://i.imgur.com/ZcLLrkY.jpg");
-        mNames.add("Washington");
-        mDesciption.add("Line for some description to pucture 9");
-
-        initRecyclerView();
+    private void startProximityContentManager() {
+        proximityContentManager = new ProximityContentManager(this, proximityContentAdapter, ((MyApplication) getApplication()).cloudCredentials);
+        proximityContentManager.start();
     }
 
-    private void initRecyclerView(){
-        Log.d(TAG, "initRecyclerView: init recyclerview.");
-        RecyclerView recyclerView = findViewById(R.id.recyclerv_view);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mNames, mImageUrls,mDesciption);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (proximityContentManager != null)
+            proximityContentManager.stop();
     }
 
 }

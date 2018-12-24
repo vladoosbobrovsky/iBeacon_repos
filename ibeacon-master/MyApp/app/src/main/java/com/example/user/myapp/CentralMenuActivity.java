@@ -46,22 +46,22 @@ public class CentralMenuActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.rellay_1:
-                Intent intent001 = new Intent(CentralMenuActivity.this, MainPageActivity.class);
+           /* case R.id.rellay_1:
+                Intent intent001 = new Intent(CentralMenuActivity.this, Main_Activity.class);
                 startActivity(intent001);
                 break;
             case R.id.imageimport1:
-                Intent intent = new Intent(CentralMenuActivity.this, MainPageActivity.class);
+                Intent intent = new Intent(CentralMenuActivity.this, SendActivity.class);
                 startActivity(intent);
-                break;
-            case R.id.imageimport2:
+                break;**/
+            /*case R.id.imageimport2:
                 Intent intent2 = new Intent(CentralMenuActivity.this, MainActivity.class);
                 startActivity(intent2);
                 break;
             case R.id.horizontalrelay2:
                 Intent intenth = new Intent(CentralMenuActivity.this, MainActivity.class);
                 startActivity(intenth);
-                break;
+                break;**/
             case R.id.imageimport3:
                 Intent intent3 = new Intent(CentralMenuActivity.this, FlexibleSpaceExampleActivity.class);
                 startActivity(intent3);
@@ -75,7 +75,7 @@ public class CentralMenuActivity extends AppCompatActivity implements View.OnCli
                 startActivity(intent5);
                 break;
             case R.id.imageimport6:
-                Intent intent6 = new Intent(CentralMenuActivity.this, FullScreenActivity.class);
+                Intent intent6 = new Intent(CentralMenuActivity.this, SendActivity.class);
                 startActivity(intent6);
                 break;
             case R.id.imageimport7:
@@ -83,9 +83,11 @@ public class CentralMenuActivity extends AppCompatActivity implements View.OnCli
                 startActivity(intent7);
                 break;
             case R.id.imageimport8:
-                Intent intent8 = new Intent(CentralMenuActivity.this, SettingsActivity.class);
+                Intent intent8 = new Intent(CentralMenuActivity.this, MainActivity.class);
                 startActivity(intent8);
                 break;
+
+
 
         }
     }

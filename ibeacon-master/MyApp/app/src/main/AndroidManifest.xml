@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_names"
@@ -41,7 +42,9 @@
         <service
             android:name=".FirebaseMessagingService"
             android:exported="true"
-            android:stopWithTask="false">
+            android:stopWithTask="false"
+            android:permission=""
+            tools:ignore="ExportedService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
@@ -99,19 +102,7 @@
             android:name=".CentralMenuActivity"
             android:label="@string/title_activity_central"
             android:screenOrientation="portrait"
-            android:theme="@style/ThemeCentral">
-        </activity>
-        <activity
-            android:name=".MainPageActivity"
-            android:label="@string/title_activity_main_page"
-            android:screenOrientation="portrait"
-            android:theme="@style/ThemeMainPage" />
-        <activity
-            android:name=".MainActivity"
-            android:configChanges="orientation|screenSize"
-            android:label="@string/title_activity_art_gallery"
-            android:screenOrientation="portrait"
-            android:theme="@style/ThemeArtGallery" />
+            android:theme="@style/ThemeCentral" />
         <activity
             android:name=".TollsActivity"
             android:label="@string/title_activity_tools"
@@ -158,13 +149,15 @@
         <activity
             android:name=".FullScreenActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".SplashScreen"
+                  android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
